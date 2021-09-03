@@ -18,20 +18,23 @@
                 <li><a href="">Delete book<i class="fas fa-trash"></i></a></li>
                 <li><a href="">Profile Settings<i class="fas fa-user"></i></a></li>
                 <div class="button">
-                    <button>Log Out</button>
+                    <button class="but">Log Out</button>
                 </div>
             </ul>
        </div>
        <section>
              <div class="center">
                 <form>
+                    <div  class="text">
+                      
+                    </div>
                     <div class="book">
                          <label>Book</label>
-                         <input placeholder="Enter Book Name"type="text">
+                         <input id="name" placeholder="Enter Book Name"type="text">
                     </div>
                     <div class="author">
                          <label>Author</label>
-                         <input placeholder="Enter Author Name" type="text">
+                         <input id="author" placeholder="Enter Author Name" type="text">
                     </div>
                     <button>Add book</button>
                </form>
@@ -40,5 +43,6 @@
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
        <script src="/js/firebase.js"></script>
+       <script src="/js/add.js"></script>
 </body>
 </html>
