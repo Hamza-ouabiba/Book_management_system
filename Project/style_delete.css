@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: url('https://static01.nyt.com/images/2021/05/21/arts/21Summer-Reading-2021-D/21Summer-Reading-2021-A-05-mobileMasterAt3x.jpg');
+    background: url('/img/j.jpg');
     background-size: cover;
     background-position: bottom;
 }
