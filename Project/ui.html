@@ -10,17 +10,57 @@
 </head>
 <body>
        <div class="sidebar">
-           <header><img src="https://avatars.githubusercontent.com/u/73914495?v=4" alt="">       Profile</header>
+           <header>Profile</header>
             <ul>
                 <li><a href="">Book Search<i class="fas fa-search"></i></a></li>
                 <li><a href="">Add book<i class="fas fa-plus"></i></a></li>
                 <li><a href="">Show books<i class="fas fa-eye"></i></a></li>
                 <li><a href="">Delete book<i class="fas fa-trash"></i></a></li>
                 <li><a href="">Profile Settings<i class="fas fa-user"></i></a></li>
+                <div class="button">
+                    <button>Log Out</button>
+                </div>
             </ul>
        </div>
        <section>
-            
+             <div class="center">
+                <form>
+                    <div class="book">
+                         <label>Book</label>
+                         <input placeholder="Enter Book Name"type="text">
+                    </div>
+                    <div class="author">
+                         <label>Author</label>
+                         <input placeholder="Enter Author Name" type="text">
+                    </div>
+                    <button>Add book</button>
+               </form>
+             </div>
        </section>
+       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+       <script type="module">
+        // Import the functions you need from the SDKs you need
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBjnjOLNcpdCO1JN7lmEUp_fxcaXJReVTk",
+          authDomain: "book-management-system-3b821.firebaseapp.com",
+          projectId: "book-management-system-3b821",
+          storageBucket: "book-management-system-3b821.appspot.com",
+          messagingSenderId: "536599902616",
+          appId: "1:536599902616:web:9f0b8b24aae8eb1bb113ed"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+        db.collection("Book").get()
+        .then((res) => {
+             res.forEach(book => console.log(book.data()));
+        })
+        //add it to the user interface : 
+
+      </script>
 </body>
 </html>
