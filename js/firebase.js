@@ -14,14 +14,11 @@ const firebaseConfig =
         // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore()
-    db.collection("Book").get()
-    .then((res) => {
- res.forEach(book => console.log(book.data()));
- })
+    
  //add it to the user interface : 
  
 function add_ui(book)
 {
-     
+
 }
         

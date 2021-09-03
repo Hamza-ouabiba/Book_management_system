@@ -5,8 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/Project/style_delete.css">
 </head>
 <body>
-    z
+       <div class="sidebar">
+           <header>Profile</header>
+            <ul>
+                <li><a href="">Book Search<i class="fas fa-search"></i></a></li>
+                <li><a href="ui.html">Add book<i class="fas fa-plus"></i></a></li>
+                <li><a href="">Show books<i class="fas fa-eye"></i></a></li>
+                <li><a href="/project/book_search.html">Delete book<i class="fas fa-trash"></i></a></li>
+                <li><a href="">Profile Settings<i class="fas fa-user"></i></a></li>
+                <div class="button">
+                    <button class="but">Log Out</button>
+                </div>
+            </ul>
+       </div>
+       <section>
+             <div class="center">
+                <form>
+                    <div  class="text">
+                      
+                    </div>
+                    <div class="book">
+                         <label>Book Name</label>
+                         <input required id="name" placeholder="Enter Book Name"type="text">
+                    </div>
+                    <div class="author">
+                         <label> Author</label>
+                         <input required id="author" placeholder="Enter Author Name" type="text">
+                    </div>
+                    <button>Delete book</button>
+               </form>
+             </div>
+       </section>
+       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+       <script src="/js/firebase.js"></script>
+       <script src="/js/delete.js"></script>
 </body>
 </html>

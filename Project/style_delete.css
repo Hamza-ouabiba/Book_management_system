@@ -85,7 +85,7 @@ ul li:hover a {
      align-items: center;
      margin-top: 40px;
      border: none;
-     background: rgb(88, 90, 231);
+     background: rgb(255, 66, 49);
      color: white;
      font-weight: 1000;
      outline: none;
@@ -95,7 +95,7 @@ ul li:hover a {
      transition: .3s;
 }
 .center button:hover{
-    background: rgb(0, 65, 139);
+    background: rgb(255, 30, 0);
 }
 .sidebar .button{
     background: linear-gradient(120deg,orange,rgb(241, 39, 39));
@@ -121,7 +121,6 @@ ul li:hover a {
     background: rgb(119, 216, 119);
     border-radius: 3px;
     text-align: center;
-    color: white;
 }
 .error{
     margin-bottom: 40px;
@@ -130,5 +129,7 @@ ul li:hover a {
     background: rgb(228, 64, 64);
     border-radius: 3px;
     text-align: center;
-    color: white;
+}
+.errase {
+    width: 100%;
 }

@@ -19,17 +19,22 @@ form.addEventListener('submit',function (e)
     {
         let html = 
         `
-           <small>Book added successfully</small>
+           <small>Book Added successfully</small>
         `
         small.innerHTML = html;
         small.setAttribute('class','success');
-        form.reset()
+        setTimeout(function() 
+        {
+            small.innerHTML= ""
+            small.setAttribute('class',' ');
+            form.reset()
+        },3000);
     })
     .catch(function()
     {
         let html = 
         `
-           <small>Book added successfully</small>
+           <small>ERROR !</small>
         `   
         small.innerHTML = html;
         small.setAttribute('class','error');
