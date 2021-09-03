@@ -69,6 +69,10 @@ ul li:hover a {
      outline: none;
      border-radius: 10px;
      background: transparent;
+     transition: .3s;
+}
+.center input:focus{
+     border: 1px solid rgb(17, 17, 228);
 }
 .center label {
      color: black;
@@ -80,16 +84,17 @@ ul li:hover a {
      align-items: center;
      margin-top: 40px;
      border: none;
-     background: linear-gradient(120deg,orange,rgb(241, 39, 39));
+     background: rgb(110, 110, 243);
      color: white;
      font-weight: 1000;
      outline: none;
      font-size: 14px;
      cursor: pointer;
      border-radius: 3px;
+     transition: .3s;
 }
 .center button:hover{
-    background: linear-gradient(120deg,orange,rgb(248, 0, 0));
+    background: rgb(68, 68, 251);
 }
 .sidebar .button{
     background: linear-gradient(120deg,orange,rgb(241, 39, 39));
