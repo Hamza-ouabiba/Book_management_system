@@ -1,5 +1,6 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
+var pattern = /^[A-Z0-9]{10,13}$/
 //getting input values : 
 var button = document.querySelector('.button');
 button.addEventListener('click',function(event)
@@ -20,11 +21,17 @@ form.addEventListener('submit',function (e)
     e.preventDefault();
     let book = document.getElementById('name').value;
     let author = document.getElementById('author').value;
-    //creating an object :
-    let Book_db = 
+    let date = document.getElementById('date').value;
+    let isbn = document.getElementById('isbn').value;
+    if(pattern.test(isbn))
     {
-       name: book,
-       Author: author
+        //creating an object :
+      let Book_db = 
+    {
+        name: book,
+       Author: author,
+       Edition: date,
+       ISBN: isbn
     };
     //taking values to the database :
     db.collection("Book").add(Book_db)
@@ -53,4 +60,10 @@ form.addEventListener('submit',function (e)
         small.setAttribute('class','error');
         form.reset()
     })
+  } else 
+    {
+        small.innerHTML = "ISBN SHOULD HAVE 10 DIGITS  "
+        small.setAttribute('class','error');
+    }
+    
 })
