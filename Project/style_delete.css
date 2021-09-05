@@ -105,6 +105,7 @@ ul li:hover a {
     margin-left: 70px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
 }
 .sidebar .button button{
      padding:10px;
@@ -113,6 +114,7 @@ ul li:hover a {
      color: white;
      font-size: 17px;
      cursor: pointer;
+
 }
 .success{
     margin-bottom: 40px;

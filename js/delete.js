@@ -1,5 +1,18 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
+let button = document.querySelector('.but');
+button.addEventListener('click',function(event)
+{
+     event.preventDefault();
+     firebase.auth().signOut()
+     .then(res => 
+        {
+             alert('log out succesfull');
+             console.log("log out succesfull : ",res);
+             document.location.href = "/Authentication/auth.html";
+        })
+        .catch(error => console.log(error));
+})
 form.addEventListener('submit',function(event)
 {
      event.preventDefault();

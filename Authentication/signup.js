@@ -34,3 +34,14 @@ function signIn()
          alert(error)
     })
 }
+// function logOut()
+// {
+//      firebase.auth().signOut()
+//      .then(res => 
+//         {
+//              alert('log out succesfull');
+//              console.log("log out succesfull : ",res);
+//              document.location.href = "/Authentication/auth.html";
+//         })
+//      .catch(error => console.log(error));
+// }
