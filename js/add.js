@@ -1,6 +1,19 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
 //getting input values : 
+var button = document.querySelector('.button');
+button.addEventListener('click',function(event)
+{
+     event.preventDefault();
+     firebase.auth().signOut()
+     .then(res => 
+        {
+             alert('log out succesfull');
+             console.log("log out succesfull : ",res);
+             document.location.href = "/Authentication/auth.html";
+        })
+        .catch(error => console.log(error));
+})
 form.addEventListener('submit',function (e) 
 {
     //cancelling bubbling ;

@@ -4,7 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: radial-gradient(circle, #555555, #535353, #505050, #4e4e4e, #4c4c4c);
+    background: url('https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/wave.png');
      background-size: cover;
     background-position: bottom;
     font-family: 'Lato', sans-serif;
@@ -12,31 +12,35 @@ body{
 }
 .center {
      width: 400px;
-     height: 60vh;
-     background-color: rgb(59, 58, 58);
+     background-color: rgb(255, 248, 248);
      border-radius: 10px;
 }
 .text  {
     text-align: center;
     font-size: 22px;
     padding-top:24px;
-    color: whitesmoke;
+    color: rgb(36, 33, 33);
     letter-spacing: 0.5px;
     border-bottom: 1px solid black;
+    user-select: none;
 }
 .form {
-    min-height: 500px;
+    min-height: 300px;
     padding:60px 60px;
      border-radius: 10px;
      margin-left: 2rem;
 }
 .form input {
      margin-bottom: 20px;
+     margin-top:10px;
      width: 200px;
      padding: 10px;
      border-radius: 4px;
      border: 1px solid rgb(173, 164, 164);
      outline: none;
+}
+.form input :hover {
+     border: 1px solid #10866c;
 }
 .form button {
     margin: 40px;
@@ -48,7 +52,26 @@ body{
     outline: none;
     font-weight: 1000;
     border-radius: 3px;
+    cursor: pointer;
 }
 .form button:hover {
     background-color: #10866c;
+}   
+.signup{
+    text-align: center;
+    padding-right: 20px;
+    color: rgb(36, 32, 32);
+}
+.signup a{
+    text-decoration: none;
+    color: #3ccfaf;
+    margin-left: 8px;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+.form label {
+     font-size: 14px;
+     font-weight: 1000;
+     color: rgb(93, 90, 90);
 }

@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: rgb(120, 139, 139);
+    background: url('https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/wave.png');
      background-size: cover;
     background-position: bottom;
 }
@@ -98,7 +98,7 @@ ul li:hover a {
     background: rgb(0, 65, 139);
 }
 .sidebar .button{
-    background: linear-gradient(120deg,orange,rgb(241, 39, 39));
+    background: #3ccfaf;
     display: block;
     margin-top: 90px;
     width: 50%;

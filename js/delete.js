@@ -18,7 +18,7 @@ form.addEventListener('submit',function(event)
                    flag = true;
                     //getting the id : -->
                     db.collection('Book').doc(book.id).delete()
-                    .then(function () 
+                    .then(function (e) 
                     {
                         let html = 
                         `
@@ -26,8 +26,9 @@ form.addEventListener('submit',function(event)
                         `
                         small.innerHTML = html;
                         small.setAttribute('class','success');
-                        setTimeout(function()
+                        setTimeout(function(e)
                         {
+                            console.log(e)
                             small.innerHTML = "";
                             small.setAttribute('class','d');
                         },3000)
