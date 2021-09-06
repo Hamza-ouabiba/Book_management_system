@@ -28,7 +28,7 @@ form.addEventListener('submit',function (e)
         //creating an object :
       let Book_db = 
     {
-        name: book,
+       name: book,
        Author: author,
        Edition: date,
        ISBN: isbn
