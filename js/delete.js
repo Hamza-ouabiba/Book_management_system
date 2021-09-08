@@ -85,6 +85,7 @@ form.addEventListener('submit',function(event)
           }
      })
 })
+//jquery
 $(window).on("load",function(){
      $(".loader-wrapper").fadeOut("slow");
 });

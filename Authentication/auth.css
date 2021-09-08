@@ -1,14 +1,12 @@
 body{
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
+    height: 100vh;
     align-items: center ;
     background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
      background-size: cover;
     background-position: bottom;
     font-family: 'Lato', sans-serif;
-
 }
 .center {
      width: 400px;

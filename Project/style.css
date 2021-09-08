@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: url('https://cdn-welcome.eu.mywebsite-editor.com/obc/user/d7961c16-cf52-4ab8-82a8-dbf8b84a9737/b92570d2-7f5a-4af5-9211-3a377ed8469c');
+    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
     background-size: cover;
     background-position: bottom;
 }
@@ -28,7 +28,7 @@ body{
     text-align: center;
     line-height: 120px ;
     color: white;
-    background-color:rgb(43, 44, 46);
+    background-color:#12151a;
     user-select: none;
 }
 .sidebar ul a{
@@ -98,7 +98,7 @@ ul li:hover a {
     background: rgb(0, 65, 139);
 }
 .sidebar .button{
-    background: linear-gradient(120deg,orange,rgb(233, 61, 61));
+    background: #0f4468;
     display: block;
     margin-top: 90px;
     width: 50%;
