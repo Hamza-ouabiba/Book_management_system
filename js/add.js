@@ -102,3 +102,6 @@ form.addEventListener('submit',function(e)
     }
     
 })
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+});

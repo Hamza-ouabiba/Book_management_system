@@ -24,7 +24,6 @@ function Signup()
     {
          alert(error)
     })
-    
 }
 //the function to sign into an account already existed in database: 
 function signIn()
@@ -53,3 +52,6 @@ function signIn()
 //         })
 //      .catch(error => console.log(error));
 // }
+$(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});

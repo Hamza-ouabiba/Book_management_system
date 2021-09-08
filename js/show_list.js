@@ -49,3 +49,6 @@ button_.addEventListener('click',function(event)
         })
         .catch(error => console.log(error));
 })
+$(window).on("load",function(){
+   $(".loader-wrapper").fadeOut("slow");
+});
