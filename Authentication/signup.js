@@ -1,17 +1,25 @@
 //the function to create an account
-let form = document.querySelector('.form');
-form.addEventListener('submit',(event) => 
-{
-     event.preventDefault()
+let form_ = document.querySelector('.form');
+form_.addEventListener('submit',(event) => {
+      event.preventDefault()
 })
 function Signup()
 {
      let user = document.getElementById('user').value;
      let password = document.getElementById('password').value;
+     let username = document.getElementById('username').value;
      console.log(user,password);
      //putting the inputs into the db :
      firebase.auth().createUserWithEmailAndPassword(user,password)
-    .then(res => alert('The Account is created succesfully',res))
+    .then(res => {
+          alert('The Account is created succesfully',res);
+          db.collection('users').doc(res.user.uid).set({
+                id: res.user.uid,
+                name: username,
+                email: user,
+                Password: password
+          });
+    })
     .catch(function(error)
     {
          alert(error)

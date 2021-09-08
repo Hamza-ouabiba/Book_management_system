@@ -14,8 +14,9 @@ const firebaseConfig =
         // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore()
-   firebase.auh()
  //add it to the user interface : 
+  
+
 function add_ui(book)
 {
    

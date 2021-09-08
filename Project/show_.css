@@ -122,7 +122,6 @@ ul li:hover a {
     font-size: 1.5rem;
     min-width: 400px;
     margin-left: 15rem;
-    user-select: none;
 }
 .content-table thead tr {
      background-color: #1f0216;

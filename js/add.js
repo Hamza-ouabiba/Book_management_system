@@ -1,7 +1,25 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
+var user_cred = document.querySelector('header');
 var pattern = /^[A-Z0-9]{10,13}$/
-//getting input values : 
+//getting the profile name : 
+firebase.auth().onAuthStateChanged(user => 
+    {
+         if(user)
+         {
+            let uid = user.uid;
+            db.collection('users').doc(uid).get()
+            .then(res =>
+                {
+                    let html = 
+                    `
+                      <header>${res.data().name}</header>
+                    `
+                    user_cred.innerHTML = html;
+                })
+         }
+    })
+
 var button = document.querySelector('.button');
 button.addEventListener('click',function(event)
 {
@@ -15,7 +33,8 @@ button.addEventListener('click',function(event)
         })
         .catch(error => console.log(error));
 })
-form.addEventListener('submit',function (e) 
+
+form.addEventListener('submit',function(e) 
 {
     //cancelling bubbling ;
     e.preventDefault();
@@ -23,8 +42,24 @@ form.addEventListener('submit',function (e)
     let author = document.getElementById('author').value;
     let date = document.getElementById('date').value;
     let isbn = document.getElementById('isbn').value;
+ 
     if(pattern.test(isbn))
     {
+        // db.collection('Book').get()
+        // .then(function(books)
+        // {
+        //      for(let i=0;i<books.length;i++)
+        //      {
+        //           for(let j=i+1;j<books.length;j++)
+        //           {
+        //                if(books[i].data().isbn == books[i].data().isbn)
+        //                {
+        //                     console.log('you can not do iu');
+        //                     break;
+        //                }
+        //           }
+        //      }
+        // })
         //creating an object :
       let Book_db = 
     {

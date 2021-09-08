@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="show_.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="set.css">
 </head>
 <body>
     <div class="sidebar">
-        <header></header>
+        <header>Profile Name</header>
         <ul>
             <li><a href="">Book Search<i class="fas fa-search"></i></a></li>
             <li><a href="ui.html">Add book<i class="fas fa-plus"></i></a></li>
@@ -18,25 +18,18 @@
             <li><a href="/project/Delete.html">Delete book<i class="fas fa-trash"></i></a></li>
             <li><a href="settings.html">Profile Settings<i class="fas fa-user"></i></a></li>
             <div class="button">
-                <button class="but">Log Out</button>
+                <button class="but" onclick="">Log Out</button>
             </div>
         </ul>
    </div>
-   <table class="content-table" width="60%">
-        <thead>
-             <th>Title</th>
-             <th>Author</th>
-             <th>Edition</th>
-             <th>#ISBN</th>
-        </thead>
-        <tbody>
-            
-        </tbody>
-   </table>
-       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
-       <script src="/js/firebase.js"></script>
-       <script src="/js/show_list.js"></script>
+   <div class="center">
+        <form>
+        </form>
+   </div>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+   <script src="/js/firebase.js"></script>
+   <script src="/js/sett.js"></script>
 </body>
 </html>
