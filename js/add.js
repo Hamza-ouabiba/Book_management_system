@@ -10,16 +10,16 @@ firebase.auth().onAuthStateChanged(user =>
             let uid = user.uid;
             db.collection('users').doc(uid).get()
             .then(res =>
-                {
+                {       
                     let html = 
                     `
                       <header>${res.data().name}</header>
                     `
                     user_cred.innerHTML = html;
+                    //adding every book to a specific account : 
                 })
          }
     })
-
 var button = document.querySelector('.button');
 button.addEventListener('click',function(event)
 {
@@ -33,7 +33,6 @@ button.addEventListener('click',function(event)
         })
         .catch(error => console.log(error));
 })
-
 form.addEventListener('submit',function(e) 
 {
     //cancelling bubbling ;
@@ -42,7 +41,6 @@ form.addEventListener('submit',function(e)
     let author = document.getElementById('author').value;
     let date = document.getElementById('date').value;
     let isbn = document.getElementById('isbn').value;
- 
     if(pattern.test(isbn))
     {
         // db.collection('Book').get()
@@ -93,14 +91,13 @@ form.addEventListener('submit',function(e)
         `   
         small.innerHTML = html;
         small.setAttribute('class','error');
-        form.reset()
+        form.reset() 
     })
   } else 
     {
         small.innerHTML = "ISBN SHOULD HAVE 10 DIGITS  "
         small.setAttribute('class','error');
     }
-    
 })
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");

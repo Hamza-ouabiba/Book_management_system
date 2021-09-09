@@ -3,7 +3,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center ;
-    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+    background: url('https://ask.brightcoding.dev/assets/images/frontend/auth/60e1c2a3a3b721625408163.jpg');
      background-size: cover;
     background-position: bottom;
     font-family: 'Lato', sans-serif;
@@ -15,30 +15,30 @@ body{
 }
 .text  {
     text-align: center;
-    font-size: 22px;
-    padding-top:24px;
-    color: rgb(36, 33, 33);
+    font-size: 20px;
+    color:black;
     letter-spacing: 0.5px;
     border-bottom: 1px solid black;
     user-select: none;
 }
 .form {
     min-height: 300px;
-    padding:60px 60px;
+    padding: 50px 50px;
      border-radius: 10px;
-     margin-left: 2rem;
+     margin-left: 2rem  ;
 }
 .form input {
      margin-bottom: 20px;
      margin-top:10px;
      width: 200px;
      padding: 10px;
-     border-radius: 4px;
+     border-radius: 5px;
      border: 1px solid rgb(173, 164, 164);
      outline: none;
 }
-.form input :hover {
+.form input :focus {
      border: 1px solid #10866c;
+     outline: cadetblue;
 }
 .form button {
     margin: 40px;
