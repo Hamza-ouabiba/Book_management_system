@@ -10,36 +10,42 @@
 </head>        
 <body>
       <div class="center">
-          
+          <div class="text">
+          </div>
            <form class="form">
                <div class="username">
-                    <label>Username</label>
+                    <label>New Username</label>
                      <input required id="username" type="text" placeholder="Insert your Username">
                 </div>
                 <div class="user">
-                    <label>E-mail</label>
+                    <label>New E-mail</label>
                      <input required id="user" type="email" placeholder="Insert your E-Mail">
                 </div>
                 <div class="password" >
-                    <label>password</label>  
+                    <label>New password</label>  
                      <input required type="password" placeholder="Insert your password" id="password">
                 </div>
-                <button type="submit" onclick="signIn()">SIGN IN</button>
+                <div class="image">
+                    <label>Choose Profile picture</label>
+                      <input type="file" id="Profile">
+                </div>
+                <button type="submit" onclick="Signup() ">SIGN UP</button>
                 <div class="signup">
-                     Not a member Yet?<a href="signup.html">Sign up</a>
+                     Already a Member ?<a  href="auth.html">Sign In</a>
                 </div>
            </form>
       </div>
-      <div class="loader-wrapper">
-          <span class="loader">
-               <span class="loader-inner"></span>
-        </span>
+      <!-- <div class="loader-wrapper">
+        <span class="loader">
+             <span class="loader-inner"></span>
+      </span> -->
       </div>
       <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
       <script src="/js/firebase.js"></script>
-      <script src="/js/signin.js">
+      <script src="/js/signup_.js">
 </script>
 </body>
 </html>

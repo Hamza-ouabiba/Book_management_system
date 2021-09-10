@@ -7,6 +7,7 @@ firebase.auth().onAuthStateChanged(user =>
         if(user)
         {
            let uid = user.uid;
+           firebase.storage().ref('users')
            db.collection('users').doc(uid).get()
            .then(res =>
                {

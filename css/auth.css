@@ -28,8 +28,8 @@ body{
      margin-left: 2rem  ;
 }
 .form input {
-     margin-bottom: 20px;
-     margin-top:10px;
+     margin-top:12px;
+     margin-bottom: 10px;
      width: 200px;
      padding: 10px;
      border-radius: 5px;
@@ -44,16 +44,17 @@ body{
     margin: 40px;
     width: 130px;
     padding: 10px ;
-    background-color: #3c94cf;
+    background-color: #1d2025;
     color: white;
     border: none;
     outline: none;
     font-weight: 1000;
+    margin-left: 50px;
     border-radius: 3px;
     cursor: pointer;
 }
 .form button:hover {
-    background-color: #054895;
+    background-color: #000000;
 }   
 .signup{
     text-align: center;

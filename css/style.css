@@ -50,7 +50,7 @@ body{
 ul li:hover a {
     background-color: rgb(3, 18, 31);
 }
-.sidebar img {
+.sidebar  img {
      width: 100px;
      height: 100px;
      border-radius: 100px;
