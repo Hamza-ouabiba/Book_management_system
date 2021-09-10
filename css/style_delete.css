@@ -48,7 +48,7 @@ body{
     color: rgb(226, 151, 11);
 }
 ul li:hover a {
-    background-color: rgb(120, 192, 4);
+    background-color: rgb(3, 18, 31);
 }
 .sidebar img {
      width: 100px;
@@ -56,9 +56,12 @@ ul li:hover a {
      border-radius: 100px;
      margin-top: 30px;
 }
+.sidebar h4 {
+     margin-top: 10px;
+}
 .center  {
     align-items: center;
-    width: 600px;
+    width: 900px;
     background-color: white;
     min-height: 300px;
     padding:60px 60px;

@@ -48,7 +48,7 @@ body{
     color: rgb(226, 151, 11);
 }
 ul li:hover a {
-    background-color: rgb(120, 192, 4);
+    background-color: rgb(3, 18, 31);
 }
 .sidebar img {
      width: 100px;
@@ -56,9 +56,12 @@ ul li:hover a {
      border-radius: 100px;
      margin-top: 30px;
 }
+.sidebar h4 {
+     margin-top: 10px;
+}
 .center  {
     align-items: center;
-    width: 600px;
+    width: 900px;
     background-color: white;
     min-height: 300px;
     padding:60px 60px;
@@ -90,7 +93,7 @@ ul li:hover a {
      align-items: center;
      margin-top: 40px;
      border: none;
-     background: rgb(88, 90, 231);
+     background: rgb(31, 31, 32);
      color: white;
      font-weight: 1000;
      outline: none;
@@ -100,14 +103,14 @@ ul li:hover a {
      transition: .3s;
 }
 .center button:hover{
-    background: rgb(0, 65, 139);
+    background: rgb(0, 0, 0);
 }
 .sidebar .button{
     background: #0f4468;
     display: block;
-    margin-top: 90px;
+    margin-top: 50px;
     width: 50%;
-    margin-left: 70px;
+    margin-left: 60px;
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
@@ -120,6 +123,7 @@ ul li:hover a {
      font-size: 17px;
      cursor: pointer;
 }
+
 .success{
     margin-bottom: 40px;
     width: 100%;
