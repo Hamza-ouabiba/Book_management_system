@@ -12,24 +12,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
+    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
     background-size: cover;
     background-position: bottom;
-    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
 }
 .sidebar{
     position: fixed;
-    left: 0;        
+    left: 0;
     width: 250px;
     height: 100%;
     background-color: rgb(28, 28, 29);
 }
 .sidebar header {
-    font-size: 35px;
     text-align: center;
-    line-height: 120px ;
     color: white;
-    background-color:rgb(43, 44, 46);
     user-select: none;
+    font-size: 23px;
+    margin-bottom:40px;
 }
 .sidebar ul a{
     display: block;
@@ -49,7 +48,13 @@ body{
     color: rgb(226, 151, 11);
 }
 ul li:hover a {
-    padding-left: 50px;
+    background-color: rgb(120, 192, 4);
+}
+.sidebar img {
+     width: 100px;
+     height: 100px;
+     border-radius: 100px;
+     margin-top: 30px;
 }
 .center  {
     align-items: center;
