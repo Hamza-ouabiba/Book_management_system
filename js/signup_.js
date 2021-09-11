@@ -35,3 +35,6 @@ function Signup()
          alert(error)
     })
 }
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+});

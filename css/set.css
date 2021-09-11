@@ -12,7 +12,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
     background-size: cover;
     background-position: bottom;
 }
@@ -69,21 +68,16 @@ ul li:hover a {
     height: 500px;
     width: 900px;
 }
-.center h1 {
-     text-align: center;
-     line-height: 90px;
-     background-color: cadetblue;
-}
 .center input {
-     margin-top: 10px;
-     width: 100%;
-     height: 100%;
-     border: 1px solid rgb(207, 207, 207);
-     padding: 12px;
-     outline: none;
-     border-radius: 10px;
-     background: transparent;
-     transition: .3s;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(207, 207, 207);
+    padding: 14px;
+    outline: none;
+    border-radius: 10px;
+    background: transparent;
+    transition: .3s;
 }
 .center input:focus{
      border: 1px solid rgb(17, 17, 228);
@@ -114,6 +108,7 @@ ul li:hover a {
      border-radius: 3px;
      transition: .3s;
 }
+
 .center button:hover{
     background: rgb(3, 94, 136);
 }
@@ -135,30 +130,6 @@ ul li:hover a {
      font-size: 17px;
      cursor: pointer;
 
-}
- .content-table{
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 1.5rem;
-    min-width: 400px;
-    margin-left: 15rem;
-    user-select: none;
-}
-.content-table thead tr {
-     background-color: #1f0216;
-     text-align: left;
-     color: white;
-     font-weight: bold;
-}
-.content-table th  {
-    padding: 12px 15px;
-}
-.content-table td {
-    background-color: rgb(194, 193, 193);
-     padding: 12px 15px;
-}
-.content-table tbody tr {
-     border-bottom:1px solid #dddddd;
 }
 .loader-wrapper {
     width: 100%;

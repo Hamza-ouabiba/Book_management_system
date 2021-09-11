@@ -17,14 +17,13 @@ firebase.auth().onAuthStateChanged(user =>
                     image.src = img;
                     let html = 
                     `
-                      <img src=${image.src}>
-                      <h4>${res.data().name}</h4>
+                    <img src=${image.src}>
+                    <h4>${res.data().name}</h4>
                     `
                     user_cred.innerHTML = html;
                     //adding every book to a specific account : 
                 })
             })
-            console.log(image.src)
          }
     })
 var button = document.querySelector('.button');

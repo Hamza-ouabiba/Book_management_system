@@ -12,7 +12,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
     background-size: cover;
     background-position: bottom;
 }
@@ -24,9 +23,9 @@ body{
     background-color: rgb(28, 28, 29);
 }
 .sidebar header {
+    cursor: pointer;
     text-align: center;
     color: white;
-    user-select: none;
     font-size: 23px;
     margin-bottom:40px;
 }
@@ -55,6 +54,7 @@ ul li:hover a {
      height: 100px;
      border-radius: 100px;
      margin-top: 30px;
+     cursor: pointer;
 }
 .sidebar h4 {
      margin-top: 10px;
@@ -184,7 +184,7 @@ ul li:hover a {
        line-height: 130px ;
        color: white;
        background-color:rgb(43, 44, 46);
-       user-select: none;
+       cursor: pointer;
    }
    .sidebar ul a i{
        margin: 7px;
