@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
+    background-image: url("https://i.pinimg.com/originals/54/20/1d/54201da4cd81a892f5738e79977c285d.jpg");
     background-size: cover;
     background-position: bottom;
 }
@@ -113,14 +114,14 @@ ul li:hover a {
     background: rgb(3, 94, 136);
 }
 .sidebar .button{
-    background:#0f4468;
+    background: #0f4468;
     display: block;
-    margin-top: 90px;
+    margin-top: 50px;
     width: 50%;
-    margin-left: 70px;
+    margin-left: 60px;
     text-align: center;
-    border-radius: 4px;
     cursor: pointer;
+    border-radius: 4px;
 }
 .sidebar .button button{
      padding:10px;
@@ -129,7 +130,6 @@ ul li:hover a {
      color: white;
      font-size: 17px;
      cursor: pointer;
-
 }
 .loader-wrapper {
     width: 100%;

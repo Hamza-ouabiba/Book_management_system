@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
+    background-image: url("https://i.pinimg.com/originals/54/20/1d/54201da4cd81a892f5738e79977c285d.jpg");
     background-size: cover;
     background-position: bottom;
 }
@@ -92,7 +93,7 @@ ul li:hover a {
      align-items: center;
      margin-top: 40px;
      border: none;
-     background: rgb(31, 31, 32);
+     background:rgb(4, 195, 4);
      color: white;
      font-weight: 1000;
      outline: none;
@@ -102,10 +103,10 @@ ul li:hover a {
      transition: .3s;
 }
 .center button:hover{
-    background: rgb(0, 0, 0);
+    background: rgb(2, 141, 2);
 }
 .sidebar .button{
-    background: #0f4468;
+    background: linear-gradient(120deg,blue,black);
     display: block;
     margin-top: 50px;
     width: 50%;
