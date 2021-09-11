@@ -106,7 +106,7 @@ ul li:hover a {
     background: rgb(255, 30, 0);
 }
 .sidebar .button{
-    background: #0f4468;
+    background: linear-gradient(120deg,blue,black);
     display: block;
     margin-top: 50px;
     width: 50%;
