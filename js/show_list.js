@@ -2,7 +2,7 @@ let tbody = document.querySelector('tbody');
 let button_ = document.querySelector('.but');
 var user_cred = document.querySelector('header');
 var image = document.getElementById('img')
-//to show the username in the header:
+//to show the username in the header --->
 firebase.auth().onAuthStateChanged(user => 
    {
         if(user)
