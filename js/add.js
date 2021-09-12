@@ -3,6 +3,11 @@ var small = document.querySelector('.text');
 var user_cred = document.querySelector('header');
 var image = document.getElementById('img')
 var pattern = /^[A-Z0-9]{10,13}$/
+//a function that returns a random number for the isbn : 
+function isbn_gen()
+{
+   return Math.floor(Math.random() * 100000 );
+}
 //getting the profile name : 
 firebase.auth().onAuthStateChanged(user => 
     {
@@ -46,9 +51,6 @@ form.addEventListener('submit',function(e)
     let book = document.getElementById('name').value;
     let author = document.getElementById('author').value;
     let date = document.getElementById('date').value;
-    let isbn = document.getElementById('isbn').value;
-    if(pattern.test(isbn))
-    {
         // db.collection('Book').get()
         // .then(function(books)
         // {
@@ -70,7 +72,7 @@ form.addEventListener('submit',function(e)
        name: book,
        Author: author,
        Edition: date,
-       ISBN: isbn
+       ISBN: isbn_gen()
     };
     //taking values to the database :
     db.collection("Book").add(Book_db)
@@ -99,11 +101,6 @@ form.addEventListener('submit',function(e)
         small.setAttribute('class','error');
         form.reset() 
     })
-  } else 
-    {
-        small.innerHTML = "ISBN SHOULD HAVE 10 DIGITS  "
-        small.setAttribute('class','error');
-    }
 })
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
