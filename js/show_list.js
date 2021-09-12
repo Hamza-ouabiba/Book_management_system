@@ -26,37 +26,43 @@ firebase.auth().onAuthStateChanged(user =>
         }
    })
 //getting all the data form the database :
-db.collection("Book").get()
-.then(function(books)
-{
-   
-   if(books.docs.length == 0) 
-   {
-       let add = 
-       `
-             No current data at the moment
-       `
-       tbody.innerHTML = add;
-       tbody.style.color = "red";
-   } else 
-   {
-      books.forEach((book) =>
+firebase.auth().onAuthStateChanged(user => {
+    if(user)
     {
-        let html = 
-        `
-           <tr>
-              <td>${book.data().name}</td>
-              <td>${book.data().Author}</td>
-              <td>${book.data().Edition}</td>
-              <td>${book.data().ISBN}</td>
-           </tr>
-        `
-        tbody.innerHTML += html;
-    })
-   }
-      
+       console.log()
+      let user_id = user.uid;
+      db.collection("users").doc(user_id).collection("Book_user").get()
+      .then(function(books)
+      {
+         
+         if(books.docs.length == 0) 
+         {
+             let add = 
+             `
+                   No current data at the moment
+             `
+             tbody.innerHTML = add;
+             tbody.style.color = "red";
+         } else 
+         {
+            books.forEach((book) =>
+          {
+              let html = 
+              `
+                 <tr>
+                    <td>${book.data().name}</td>
+                    <td>${book.data().Author}</td>
+                    <td>${book.data().Edition}</td>
+                    <td>${book.data().ISBN}</td>
+                 </tr>
+              `
+              tbody.innerHTML += html;
+          })
+         }
+            
+      })
+    }
 })
-.catch(error => console.log(error))
 //Sign out 
 button_.addEventListener('click',function(event)
 {

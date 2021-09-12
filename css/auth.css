@@ -80,7 +80,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #242f3f;
+    background-color: #293241;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +90,7 @@ body{
     width: 30px;
     height: 30px;
     position: relative;
-    border: 4px solid #Fff;
+    border: 4px solid rgb(255, 255, 255);
     animation: loader 2s infinite ease;
   }
   .loader-inner {
