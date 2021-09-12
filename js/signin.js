@@ -20,6 +20,7 @@ function signIn()
     firebase.auth().signInWithEmailAndPassword(user,password)
     .then(function(res)
     {
+        console.log(res)
         alert('Email and Password are correct');
         document.location.href = "/project/ui.html"
     })

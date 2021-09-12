@@ -29,7 +29,18 @@ firebase.auth().onAuthStateChanged(user =>
 db.collection("Book").get()
 .then(function(books)
 {
-   books.forEach((book) =>
+   
+   if(books.docs.length == 0) 
+   {
+       let add = 
+       `
+             No current data at the moment
+       `
+       tbody.innerHTML = add;
+       tbody.style.color = "red";
+   } else 
+   {
+      books.forEach((book) =>
     {
         let html = 
         `
@@ -42,29 +53,19 @@ db.collection("Book").get()
         `
         tbody.innerHTML += html;
     })
-   if(books.docs.length == 0) 
-   {
-       let add = 
-       `
-       <tr>
-             <td>No current data at the moment</td>
-       </tr>
-       `
-       user_cred.innerHTML = add;
    }
       
 })
-.catch(error => console.log("No crrent"))
-//
+.catch(error => console.log(error))
+//Sign out 
 button_.addEventListener('click',function(event)
 {
      event.preventDefault();
      firebase.auth().signOut()
      .then(res => 
         {
-             alert('log out succesfull');
+             console.log(res);
              console.log("log out succesfull : ",res);
-             document.location.href = "/Authentication/auth.html";
         })
         .catch(error => console.log(error));
 })
