@@ -66,6 +66,7 @@ button_.addEventListener('click',function(event)
         {
              console.log(res);
              console.log("log out succesfull : ",res);
+             document.location.href = "/Authentication/auth.html";
         })
         .catch(error => console.log(error));
 })
