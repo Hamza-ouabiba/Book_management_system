@@ -45,9 +45,11 @@ body{
 .sidebar ul a i{
     margin: 20px;
     color: rgb(226, 151, 11);
+
 }
 ul li:hover a {
-    background-color: rgb(3, 18, 31);
+    background: rgb(59, 59, 59) ;
+    margin-left: 1px;
 }
 .sidebar  img {
      width: 100px;
