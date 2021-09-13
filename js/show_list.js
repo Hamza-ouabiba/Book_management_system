@@ -25,7 +25,7 @@ firebase.auth().onAuthStateChanged(user =>
            })
         }
    })
-//getting all the data form the database :
+//getting all the data form the database with the current user ::: 
 firebase.auth().onAuthStateChanged(user => {
     if(user)
     {
