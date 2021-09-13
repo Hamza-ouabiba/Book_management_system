@@ -29,6 +29,15 @@ function signIn()
          alert(error)
     })
 }
+//fonction qui va nous permettre de faire envoyer un message a l'utilisateur au cas ou il a oublie son mdp ::
+function forget()
+{
+    let email = document.getElementById('user');
+    firebase.auth().sendPasswordResetEmail(email.value)
+    .then(res => console.log("Check your email you wonderful email"))
+    .catch(error => console.log("an error has been detected please try again asap : "));
+    form_.reset();
+}
 // function logOut()
 // {
 //      firebase.auth().signOut()

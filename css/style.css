@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center ;
-    background-image: url("https://ask.brightcoding.dev/assets/images/frontend/auth/60e1c2a3a3b721625408163.jpg");
+    background: url('https://login.opendns.com/img/bg/opendns-bg.jpg');
     background-size: cover;
     background-position: bottom;
 }
