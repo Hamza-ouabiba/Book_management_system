@@ -46,58 +46,64 @@ button.addEventListener('click',function(event)
         })
         .catch(error => console.log(error));
 })
-form.addEventListener('submit',function(event)
-{
-     event.preventDefault();
-     let Book = document.getElementById('name').value;
-     let Author = document.getElementById('author').value;
-     //we should have the id of the book:
-     db.collection('Book').get()
-     .then(function(books) 
-     {
-          let flag = false;
-          books.forEach(function(book)
+firebase.auth().onAuthStateChanged(user => {
+      if(user)
+      {
+           let user_id = user.uid;
+          form.addEventListener('submit',function(event)
           {
-               //searching for the book and getting the id :
-               if(Book === book.data().name && Author === book.data().Author)
+               event.preventDefault();
+               let Book = document.getElementById('name').value;
+               let Author = document.getElementById('author').value;
+               //we should have the id of the book:
+               db.collection("users").doc(user_id).collection("Book_user").get()
+               .then(function(books) 
                {
-                   flag = true;
-                    //getting the id : -->
-                    db.collection('Book').doc(book.id).delete()
-                    .then(function (e) 
+                    let flag = false;
+                    books.forEach(function(book)
+                    {
+                         //searching for the book and getting the id :
+                         if(Book === book.data().name && Author === book.data().Author)
+                         {
+                             flag = true;
+                              //getting the id : -->
+                              db.collection('users').doc(user_id).collection("Book_user").doc(book.id).delete()
+                              .then(function (e) 
+                              {
+                                  let html = 
+                                  `
+                                     <small>Book Deleted successfully</small>
+                                  `
+                                  small.innerHTML = html;
+                                  small.setAttribute('class','success');
+                                  setTimeout(function(e)
+                                  {
+                                      console.log(e)
+                                      small.innerHTML = "";
+                                      small.setAttribute('class','d');
+                                  },3000)
+                                  form.reset()
+                              })
+                         }
+                    })
+                    if(flag === false)
                     {
                         let html = 
-                        `
-                           <small>Book Deleted successfully</small>
-                        `
-                        small.innerHTML = html;
-                        small.setAttribute('class','success');
-                        setTimeout(function(e)
-                        {
-                            console.log(e)
-                            small.innerHTML = "";
-                            small.setAttribute('class','d');
-                        },3000)
-                        form.reset()
-                    })
-               }
+                       `
+                          <small>Book Not Found </small>
+                       `
+                      small.innerHTML = html;
+                      small.setAttribute('class','error');
+                      setTimeout(function()
+                      {
+                          small.innerHTML = "";
+                          small.setAttribute('class','d');
+                      },3000)
+                      form.reset()
+                    }
+               })
           })
-          if(flag === false)
-          {
-              let html = 
-             `
-                <small>Book Not Found </small>
-             `
-            small.innerHTML = html;
-            small.setAttribute('class','error');
-            setTimeout(function()
-            {
-                small.innerHTML = "";
-                small.setAttribute('class','d');
-            },3000)
-            form.reset()
-          }
-     })
+      }
 })
 //jquery
 $(window).on("load",function(){
