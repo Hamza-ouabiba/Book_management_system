@@ -8,26 +8,68 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/css/style_delete.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-       <div class="sidebar">
-          <header>
-               <img src="" alt="" id="img">
-          </header>
-            <ul>
-               <li><a href=""><i class="fas fa-search"></i>Book Search</a></li>
-               <li><a href="ui.html"><i class="fas fa-plus"></i>Add book</a></li>
-               <li><a href="show_list.html"><i class="fas fa-eye"></i>Show books</a></li>
-               <li><a href="Delete.html"><i class="fas fa-trash"></i>Delete book</a></li>
-               <li><a href="settings.html"><i class="fas fa-user"></i>Profile</a></li>
-                <div class="button">
-                    <button class="but" onclick="">Log Out</button>
-                </div>
-            </ul>
-       </div>
+     <div class="sidebar">
+          <div class="logo-details">
+             <i class='bx bx-library'></i>
+               <span class="logo_name">Laborator</span>
+          </div>
+          <ul class="nav-links">
+               <li>
+                  <a href="/project/ui.html">
+                       <i class='bx bxs-grid-alt'></i>
+                       <span  class="link_name">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="/project/ui.html">
+                       <i class='bx bxs-book-add' ></i>
+                       <span class="link_name">Add Book</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="/project/Delete.html">
+                       <i class='bx bxs-book-alt'></i>
+                       <span class="link_name">Delete Book</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="/project/settings.html">
+                       <i class='bx bxs-grid-alt'></i>
+                       <span class="link_name">Dashboard</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="">
+                       <i class='bx bx-search-alt-2' ></i>
+                       <span class="link_name">Search Book</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="">
+                       <i class='bx bxs-cog' ></i>
+                       <span class="link_name">Settings</span>
+                  </a>
+               </li>
+               
+          </ul>
+          <div class="profile-details">
+               <div class="profile-content">
+                    <img src="/img/téléchargement.jpg" alt="">
+               </div>
+               <div class="name-job">
+                    <div class="profile_name">
+                         hamza ouabiba
+                    </div>
+                    <div class="job">
+                         web developer
+                    </div>
+               </div>
+               <button><i class='bx bx-log-out' ></i></button>
+          </div>
+     </div>
        <section>
              <div class="center">
                 <form>
@@ -54,15 +96,12 @@
                </form>
              </div>
        </section>
-       <div class="loader-wrapper">
-          <span class="loader">
-               <span class="loader-inner"></span>
-        </span>
+      
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
        <script src="/js/firebase.js"></script>
-       <script src="/js/delete.js"></script>
+       <!-- <script src="/js/delete.js"></script> -->
 </body>
 </html>

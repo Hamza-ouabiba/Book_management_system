@@ -3,7 +3,7 @@ body{
     justify-content: center;
     height: 100vh;
     align-items: center ;
-    background: url('https://login.opendns.com/img/bg/opendns-bg.jpg');
+    background: black;
     background-size: cover;
     background-position: bottom;
     font-family: 'Montserrat', sans-serif;
@@ -44,7 +44,7 @@ body{
     margin: 40px;
     width: 130px;
     padding: 10px ;
-    background-color: #1d2025;
+    background-color: #ec1212;
     color: white;
     border: none;
     outline: none;
@@ -52,8 +52,10 @@ body{
     margin-left: 50px;
     border-radius: 3px;
     cursor: pointer;
+    transition: 0.4s;
 }
 .form button:hover {
+  transition: .4s;
     background-color: #000000;
 }   
 .signup{
@@ -75,31 +77,32 @@ body{
      color: rgb(93, 90, 90);
 }
 .loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #293241;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .loader {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    border: 4px solid rgb(255, 255, 255);
-    animation: loader 2s infinite ease;
-  }
-  .loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid rgb(245, 0, 0);
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(245, 4, 4);
+  background-color: rgb(245, 4, 4);
     animation: loader-inner 2s infinite ease-in;
-  }
+}
   @keyframes loader {
     0% { transform: rotate(0deg);}
     25% { transform: rotate(180deg);}
@@ -137,7 +140,7 @@ body{
      margin-top: 20px;
   }
   .forget a{
-     color: blue;
+     color: rgb(255, 0, 0);
      text-decoration: none;
   }
   .forget a:hover {

@@ -1,8 +1,10 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
 var user_cred = document.querySelector('header');
-var image = document.getElementById('img')
+var image = document.getElementById('img');
+var para = document.querySelector('p');
 var pattern = /^[A-Z0-9]{10,13}$/
+console.log(image)
 //pour faire différencier les données de chaque utilisateur il faut creer a chaque fois une collection liée a l' ID de user :::
 //a function that returns a random number for the isbn : 
 function isbn_gen()
@@ -24,8 +26,9 @@ firebase.auth().onAuthStateChanged(user =>
                     let html = 
                     `
                     <img src=${image.src}>
-                    <h4>${res.data().name}</h4>
                     `
+                    let profile = `${res.data().name}`
+                    para.innerHTML = profile;
                     user_cred.innerHTML = html;
                     //adding every book to a specific account : 
                 })
