@@ -41,8 +41,6 @@
 .sidebar .nav-links  li {
     position: relative;
     list-style: none;
-    text-decoration: none;
-    transition: all 0.4s ease;
 }
 .sidebar .nav-links :hover {
     background: #1d1b31;
@@ -52,20 +50,19 @@
     color: #fff;
     height: 50px;
     min-width: 50px;
+    text-align: center;
+    line-height: 50px;
     font-size: 20px;
 }
 .sidebar .nav-links li a  {
     text-decoration: none;
-    text-align: center;
-
+    align-items: center;
+    display: flex;
 }
-.sidebar .link_name{
+.sidebar .nav-links li a .link_name{
     font-size: 18px;
     color: #fff;
     font-weight: 400;
-}
-.sidebar ul a i{
-    margin: 20px;
 }
 .sidebar .profile-details {
      position: fixed;

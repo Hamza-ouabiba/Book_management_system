@@ -2,7 +2,7 @@ var form = document.querySelector('form');
 var user_cred = document.querySelector('header');
 var button = document.querySelector('.button');
 var image = document.getElementById('img')
-
+var para = document.querySelector('p');
 button.addEventListener('click',function(event)
 {
      event.preventDefault();
@@ -22,16 +22,12 @@ firebase.auth().onAuthStateChanged(user =>
             let uid = user.uid;
             firebase.storage().ref('users/'+ uid + '/profile.jpg').getDownloadURL()
             .then(img => {
-                 db.collection('users').doc (uid).get()
+                 db.collection('users').doc(uid).get()
                 .then(res =>
                 {       
                     image.src = img;
-                    let html = 
-                    `
-                      <img src=${image.src}>
-                      <h4>${res.data().name}</h4>
-                    `
-                    user_cred.innerHTML = html;
+                    let profile = `${res.data().name}`
+                    para.innerHTML = profile;
                     //adding every book to a specific account : 
                 })
             })

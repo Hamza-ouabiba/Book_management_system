@@ -1,15 +1,9 @@
 var form = document.querySelector('form');
 var small = document.querySelector('.text');
-let button = document.querySelector('.but');
-var user_cred = document.querySelector('header');
-var image = document.querySelector('#img')
-var ifd = document.querySelector('header')
-console.log(image);
-ifd.addEventListener('click',(event) => {
-     console.log(event)
-      document.location.href = "/project/settings.html"
-      console.log("ha hia")
-})
+let button = document.querySelector('.button');
+var image = document.querySelector('#img');
+var para = document.querySelector('p');
+console.log(image)
 //to show the username in the header
 firebase.auth().onAuthStateChanged(user => 
      {
@@ -18,22 +12,17 @@ firebase.auth().onAuthStateChanged(user =>
              let uid = user.uid;
              firebase.storage().ref('users/'+ uid + '/profile.jpg').getDownloadURL()
              .then(img => {
-                  db.collection('users').doc (uid).get()
+                  db.collection('users').doc(uid).get()
                  .then(res =>
                  {       
                      image.src = img;
-                     let html = 
-                     `
-                       <img src=${image.src}>
-                       <h4>${res.data().name}</h4>
-                     `
-                     user_cred.innerHTML = html;
+                     let profile = `${res.data().name}`
+                     para.innerHTML = profile;
                      //adding every book to a specific account : 
                  })
              })
           }
      })
- 
 button.addEventListener('click',function(event)
 {
      event.preventDefault();

@@ -1,7 +1,8 @@
 let tbody = document.querySelector('tbody');
-let button_ = document.querySelector('.but');
+let button_ = document.querySelector('.button');
 var user_cred = document.querySelector('header');
-var image = document.getElementById('img')
+var image = document.getElementById('img');
+var para = document.querySelector('p');
 //to show the username in the header --->
 firebase.auth().onAuthStateChanged(user => 
    {
@@ -10,15 +11,16 @@ firebase.auth().onAuthStateChanged(user =>
            let uid = user.uid;
            firebase.storage().ref('users/'+ uid + '/profile.jpg').getDownloadURL()
            .then(img => {
-                db.collection('users').doc (uid).get()
+                db.collection('users').doc(uid).get()
                .then(res =>
                {       
                    image.src = img;
                    let html = 
                    `
-                     <img src=${image.src}>
-                     <h4>${res.data().name}</h4>
+                   <img src=${image.src}>
                    `
+                   let profile = `${res.data().name}`
+                   para.innerHTML = profile;
                    user_cred.innerHTML = html;
                    //adding every book to a specific account : 
                })
