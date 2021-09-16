@@ -76,7 +76,6 @@ body{
      font-weight: 1000;
      color: rgb(93, 90, 90);
 }
-<<<<<<< HEAD
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -118,9 +117,6 @@ body{
     75% { height: 100%;}
     100% { height: 0%;}
   }
-=======
-
->>>>>>> 46bb5ab908d0790da1c6ff19cc1b14f0054c1c26
   
   input[type="file"]{
     display: none;
