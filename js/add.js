@@ -4,7 +4,7 @@ var image = document.getElementById('img');
 var para = document.querySelector('p');
 var pattern = /^[A-Z0-9]{10,13}$/
 //pour faire différencier les données de chaque utilisateur il faut creer a chaque fois une collection liée a l' ID de user :::
-//a function that returns a random number for the isbn : 
+//une fonction qui permet de retourner un nombre aléatoire pour le ISBN 
 function isbn_gen()
 {
    return Math.floor(Math.random() * 100000 );
@@ -23,7 +23,7 @@ firebase.auth().onAuthStateChanged(user =>
                     image.src = img;
                     let profile = `${res.data().name}`
                     para.innerHTML = profile;
-                    //adding every book to a specific account : 
+                    //Ajouter chaque livre a un compte spécifique 
                 })
             })
          }
@@ -60,7 +60,7 @@ firebase.auth().onAuthStateChanged(user => {
                ISBN: isbn_gen()
             };
             let user_id = user.uid;
-            //taking values to the database :
+            //Faire stocker dans la base de donnée 
             db.collection("users").doc(user_id).collection("Book_user").add(Book_db)
             .then(function () 
             {
