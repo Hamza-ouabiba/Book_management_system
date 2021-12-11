@@ -11,7 +11,7 @@ form_.addEventListener('submit',(event) => {
 //      };
 //      console.log(file)
 // }
-//getting the actual profile image : 
+//prendre l'image actuelle : 
 //the function to sign into an account already existed in database: 
 function signIn()
 {
@@ -34,7 +34,7 @@ function forget()
 {
     let email = document.getElementById('user');
     firebase.auth().sendPasswordResetEmail(email.value)
-    .then(res => console.log("Check your email you wonderful email"))
+    .then(res => console.log("Check your email"))
     .catch(error => console.log("an error has been detected please try again asap : "));
     form_.reset();
 }
